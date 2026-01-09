@@ -68,9 +68,10 @@ class CreateNoise(tf.keras.Layer):
 
   def call(self, images, training=None):
     if not training:
+      return
 
     noise = tf.random.normal(shape = tf.shape(images), mean=0.0, stddev=Config.STDDEV*255)
-    noisy_images = tf.cond(tf.random.uniform([]) < 0.6,  l
+    noisy_images = tf.cond(tf.random.uniform([]) < 0.6,  
     )
     return tf.clip_by_value(noisy_images, 0, 255)
 

@@ -13,7 +13,8 @@ model = load_model(MODEL_PATH)
 H, W = model.input_shape[1], model.input_shape[2]   #mdel.input shape = (None, 256, 256, 3)
 
 def preprocess(frame):
-    img = cv2.resize(frame, (W, H))
+    img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    img = cv2.resize(img, (W, H))
     return np.expand_dims(img.astype("float32"), axis=0)
 
 

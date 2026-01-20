@@ -215,8 +215,8 @@ Jeśli wszystkie metryki osiągną progi przez 3 epoki → stop (cel osiągnięt
 
 ### 9.1 Instalacja
 ```bash
-git clone https://github.com/twoj-username/face-detection-project.git
-cd ml_zliczenie
+git clone https://github.com/StepanZubok/ml_zaliczenie
+cd ml_zaliczenie
 pip install -r requirements.txt
 ```
 

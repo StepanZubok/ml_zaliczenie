@@ -23,28 +23,6 @@ frame_count = 0
 
 while True:
     ret, frame = cap.read()
-    # ret (return value):
-    #   - True if frame captured successfully
-    #   - False if error (camera disconnected, etc.)
-    
-    # frame:
-    #   - Numpy array containing the image
-    #   - Shape: (height, width, 3)
-    #   - Example: (1080, 1920, 3) for Full HD
-
-    ret, frame = cap.read()
-
-    # Example successful read:
-    # ret = True
-    # frame = numpy.array([
-    #     [[123, 89, 200], [124, 90, 201], ...],  # Row 1
-    #     [[125, 88, 199], [126, 91, 202], ...],  # Row 2
-    #     ...
-    # ])  # Shape: (1080, 1920, 3)
-
-    # # Example failed read (camera unplugged):
-    # ret = False
-    # frame = None  # or empty array
     if not ret:
         break
     
